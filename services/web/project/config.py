@@ -21,6 +21,8 @@ class TestingConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    STATIC_FOLDER = f"{os.getenv('APP_FOLDER')}/project/static"
-    MEDIA_FOLDER = f"{os.getenv('APP_FOLDER')}/project/media"
+    STATIC_FOLDER = "/home/alex/projects/allprojects/all/pythonprojects/flask/docker-flask/services/web/project/static/"
+    MEDIA_FOLDER = "/home/alex/projects/allprojects/all/pythonprojects/flask/docker-flask/services/web/project/media/"
+    print("Static folder",STATIC_FOLDER)
+    print("Media folder",MEDIA_FOLDER)
     DEBUG = False
